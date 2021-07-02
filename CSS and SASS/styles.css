@@ -1,0 +1,235 @@
+@import url("https://fonts.googleapis.com/css2?family=Monoton&family=Poppins:wght@300;400;500;600;700&family=Raleway:wght@300;400;500;600&display=swap");
+/*
+font-family: 'Monoton', cursive;
+font-family: 'Poppins', sans-serif;
+font-family: 'Raleway', sans-serif;
+*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+li {
+  list-style: none;
+}
+li a {
+  text-decoration: none;
+  font-family: "Poppins", sans-serif;
+}
+
+.section {
+  height: 100vh;
+  padding: 100px;
+}
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  padding: 0 50px;
+  transition: all 0.4s;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 10vh;
+}
+.header__logo {
+  color: #fff;
+  text-decoration: none;
+  font-family: "Monoton", cursive;
+  font-size: 2rem;
+  font-weight: 100;
+}
+.header__logo span {
+  color: red;
+}
+.header .nav-menu {
+  display: flex;
+}
+.header .nav-menu li {
+  padding: 10px 20px;
+  transition: 0.4s;
+  border-radius: 3px;
+}
+.header .nav-menu li a {
+  color: #fff;
+}
+.header .nav-menu li:hover {
+  background-color: red;
+}
+
+.sticky {
+  background-color: white;
+}
+.sticky .header__logo {
+  color: black;
+}
+.sticky .nav-menu li a {
+  color: black;
+}
+
+.home {
+  font-family: "Poppins", sans-serif;
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url(/Assets/img/bg.jpg);
+  background-size: cover;
+}
+.home p {
+  font-weight: 300;
+  color: #111;
+}
+.home .content {
+  padding: 8rem;
+  text-align: center;
+}
+.home .content h2 {
+  font-size: 5em;
+  color: #fff;
+  font-family: "Monoton", cursive;
+  font-weight: 100;
+  word-spacing: 10px;
+}
+.home .content p {
+  font-size: 1rem;
+  color: #fff;
+}
+.home .content .btn {
+  font-size: 1.2rem;
+  text-decoration: none;
+  color: #fff;
+  text-transform: uppercase;
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #ff0157;
+  border-radius: 2px;
+  margin-top: 1.8rem;
+  font-weight: 550;
+  transition: 0.5s;
+}
+.home .content .btn:hover {
+  letter-spacing: 4px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+.about {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.about .row {
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.about .row .col {
+  position: relative;
+  width: 50%;
+}
+.about .row .col p {
+  font-family: "Poppins", sans-serif;
+  text-align: justify;
+  width: 90%;
+}
+.about__title {
+  color: #111;
+  font-size: 3rem;
+  font-weight: 100;
+  font-family: "Monoton", cursive;
+  word-spacing: 10px;
+}
+.about__title span {
+  color: red;
+}
+.about .imgBx {
+  position: relative;
+  width: 100%;
+  min-height: 300px;
+}
+.about .imgBx img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 110%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.menu {
+  font-family: "Poppins", sans-serif;
+  height: auto;
+}
+.menu__title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.menu .btn {
+  font-size: 1.2rem;
+  text-decoration: none;
+  color: #fff;
+  text-transform: uppercase;
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #ff0157;
+  border-radius: 2px;
+  margin-top: 1.8rem;
+  font-weight: 550;
+  transition: 0.5s;
+}
+.menu .btn:hover {
+  letter-spacing: 4px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+.menu .content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin-top: 40px;
+}
+.menu .content .box {
+  width: 340px;
+  margin: 20px;
+  border: 15px solid #fff;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: all 0.2s;
+}
+.menu .content .box .imgBx {
+  position: relative;
+  width: 100%;
+  height: 300px;
+}
+.menu .content .box .imgBx img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.menu .content .box .text {
+  padding: 15px 0 5px;
+}
+.menu .content .box .text h3 {
+  font-weight: 400;
+  color: #111;
+}
+.menu .content .box:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 22px rgba(0, 0, 0, 0.2);
+}/*# sourceMappingURL=styles.css.map */
